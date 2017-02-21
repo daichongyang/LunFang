@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 600px;
+            height: 600px;
+            /*background: darkred;*/
+
+        }
+        img{
+            width: 600px;
+            height:600px;
+            position: absolute;
+            top:160px;
+            left: 600px;
+        }
+        #box{
+            position: absolute;
+            top:160px;
+            left: 600px;
+            margin:0;
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script>
+
+
+        var str = "";
+        var i=1;
+       var time= setInterval(function () {
+            var Img =document.createElement("img");
+            var oBox = document.getElementById("box");
+//            oBox.appendChild("img");
+//            if(i>=1&i<=3){
+//                i++;
+//            }else{
+//                i--;
+//            }
+//            oBox.style.display = i + ".jpg";
+            str= str+"<div><img src='img/"+i+".jpg'/></div>";
+            i++;
+            document.body.innerHTML=str;
+if(i==4){
+    clearInterval(time);
+}
+        }, 1000)
+
+
+</script>
+</html>

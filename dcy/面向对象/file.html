@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+        img{
+            margin: 0;
+            padding: 0;
+            width: 600px;
+            height:600px;
+
+        }
+        #box{
+            padding: 0;
+
+            width: 600px;
+            height: 600px;
+           margin:0 auto;
+            overflow:hidden;
+            position: relative;
+
+        }
+        #ul1{
+            list-style-type: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="ul1">
+        <li><img src="img/1.jpg"/></li>
+        <li><img src="img/2.jpg"/></li>
+        <li><img src="img/3.jpg"/></li>
+        <li><img src="img/100.jpg"/></li>
+
+        <li><img src="img/1.jpg"/></li>
+        <li><img src="img/2.jpg"/></li>
+        <li><img src="img/3.jpg"/></li>
+        <li><img src="img/100.jpg"/></li>
+
+
+    </ul>
+
+</div>
+</body>
+<script type="text/javascript" src="move%20(1).js"></script>
+<script>
+      var y =-600;
+      var oUL=document.getElementById("ul1");
+
+      setInterval(function(){
+          startMove(oUL,"top",y,function(){
+
+              if(y<-1800){
+                  y = -600;
+                  oUL.style.top=0;
+            console.log("aasdadsdasd");
+              }
+          });
+     y=y-600;
+      },3000)
+
+
+</script>
+<script>
+
+
+
+
+
+</script>
+</html>
