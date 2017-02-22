@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #pic1{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<img src="img/100.jpg" id="pic1"/>
+</body>
+<script>
+    var y1=0;
+    var x1=0;
+    document.onkeydown=function(e){
+
+        var Key1= e.keyCode;
+        console.log(Key1);
+        var oPic1=document.getElementById("pic1");
+        if(Key1==40){
+
+            y1=y1+20;
+        }
+        if(Key1==39){
+
+            x1=x1+20;
+        }
+        if(Key1==38){
+
+            y1=y1-20;
+            }
+        if(Key1==37){
+
+            x1=x1-20;
+        }
+        pic1.style.top=y1+"px";
+        pic1.style.left=x1+"px";
+// pic1.style.left=x1+"px";
+
+//
+    }
+
+</script>
+</html>

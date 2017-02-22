@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #pic1{
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            overflow:hidden;
+        }
+        /*onmousemove{*/
+            /*overflow:hidden;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<img src="img/100.jpg" id="pic1">
+</body>
+<script>
+    var w= document.documentElement.clientWidth;
+    var h= document.documentElement.clientHeight;
+    //console.log(w,h);
+
+    var oPic1=document.getElementById("pic1");
+    oPic1.style.left=parseInt(w/2-70)+"px";
+    oPic1.style.top=parseInt(h/2-52)+"px";
+    document.onmousemove=function(e){
+        var x=e.clientX;
+        var y=e.clientY;
+       console.log(x,y);
+     oPic1.style.top=(y-52)+"px";
+        oPic1.style.left=(x-70)+"px";
+    }
+
+//    var mousX=document.onmousemove.;
+//    var mousY=document.onmousemove.clienty;
+//    console.log(mousX,mousY);
+</script>
+</html>

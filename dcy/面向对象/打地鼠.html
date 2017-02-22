@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        #div1{
+            width:600px ;
+            height:600px;
+            background: #000;
+            margin: 0 auto;
+            font-size: 0;
+        }
+            #score{
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                top: 300px;
+                left: 100px;
+                background: #666;
+            }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    <img src="img/4.jpg" onclick="func(this)"/>
+    
+</div>
+
+<div style="height: 50px;">
+    <div id="score"></div>
+</div>
+
+</body>
+<script>
+    var Score=document.getElementById("score");
+
+    var sc=0;
+         function func(obj){
+             var str =obj.src;
+             var StrL=str.charAt(str.length-5);
+             if(StrL=="2"){
+                 sc=sc+1;
+               obj.src="img/4.jpg";
+             }else{
+                 sc=sc-1;
+             }
+
+             Score.innerHTML="分数："+sc;
+         }
+
+      setInterval(function(){
+          var Math1=parseInt(Math.random()*9);
+          var c=document.getElementById("div1");
+
+          c.children[Math1].src="img/2.png";
+
+          var Math2=parseInt(Math.random()*9);
+          c.children[Math2].src="img/4.jpg";
+      },1000)
+
+</script>
+</html>

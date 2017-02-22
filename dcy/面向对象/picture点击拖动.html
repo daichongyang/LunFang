@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #pic1{
+            position: absolute;
+            top: 300px;
+            left: 300px;
+            overflow:hidden;
+        }
+        /*onmousemove{*/
+        /*overflow:hidden;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<img src="img/100.jpg" id="pic1">
+</body>
+<script>
+    var w= document.documentElement.clientWidth;
+    var h= document.documentElement.clientHeight;
+   //console.log(w,h)
+
+    var oPic1=document.getElementById("pic1");
+//    oPic1.style.left=parseInt(w/2-70)+"px";
+//    oPic1.style.top=parseInt(h/2-52)+"px";
+    document.onmousedown=function(e) {
+        e.preventDefault();
+        var arr=[];
+
+        var xx= e.offsetX;
+        var yy= e.offsetY;
+        document.onmousemove = function (e) {
+            var p={};
+            p.a= e.clientX;
+            p.b= e.clientY;
+            arr.push(p);
+//            var x = e.clientX-xx;
+//            var y = e.clientY-yy;
+           // console.log(x, y);
+//            oPic1.style.top = y  + "px";
+//            oPic1.style.left = x + "px";
+        }
+        document.onmouseup=function(){
+            var i=0;
+           var time= setInterval(function(){
+                var x=arr[i].a;
+                var y=arr[i].b;
+                oPic1.style.left=x+"px";
+                oPic1.style.top=y+"px";
+                i++;
+                if(i>=arr.length){
+                  clearInterval(time);
+                }
+                console.log(x,y);
+            },100);
+
+            document.onmousemove=null;
+        }
+    }
+
+    //    var mousX=document.onmousemove.;
+    //    var mousY=document.onmousemove.clienty;
+    //    console.log(mousX,mousY);
+</script>
+</html>

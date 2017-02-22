@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #box{
+            position: absolute;
+            top:0;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body id="box">
+<img src="img/1%20(1).gif"/>
+</body>
+<script>
+    var oBox= document.getElementById("box");
+
+    document.onmousedown=function(e){
+     var arr=[];
+        var xx=e.offsetX;
+        var yy= e.offsetY;
+        document.onmousemove=function(e){
+            var p={};
+
+            p.x= e.clientX;
+            p.y= e.clientY;
+            arr.push(p);
+//          var  x= e.clientX;
+//           var y= e.clientY;
+ console.log(p.x,p.y);
+
+        }
+        document.onmouseup=function(){
+
+            var i=0;
+           var time= setInterval(function(){
+               oBox.src="img/2.gif";
+                var x=arr[i].x;
+                var y=arr[i].y;
+                oBox.style.top=y+"px";
+                oBox.style.left=x+"px";
+                i++;
+                if(i>=arr.length){
+                    clearInterval(time);
+                }
+            },50)
+
+            document.onmousemove=null;
+        }
+    }
+
+</script>
+</html>
