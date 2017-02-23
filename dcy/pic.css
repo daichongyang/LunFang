@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+}
+
+
+figure {
+    width: 400px;
+    height:400px;
+    position: relative;
+    /*border: 1px solid cadetblue;*/
+    overflow: hidden;
+    float: left;
+}
+/*figure figcaption{*/
+    /*position: relative;*/
+
+/*}*/
+figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:darkred ;
+}
+figure figcaption h2,img{
+    transition:all 1s;
+}
+figure figcaption p{
+    transition:all 2s;
+}
+.figure1 img{
+    transform:rotate(-40deg);
+    box-shadow:black 10px 10px 10px;
+}
+.figure1 figcaption h2{
+
+    transform: translate(20px,260px);
+}
+.figure1 figcaption p {
+
+    transform: translate(20px, 400px);
+}
+.figure1:hover figcaption h2{
+   transform:translate(20px,240px);
+}
+.figure1:hover figcaption p{
+    transform:translate(20px,300px)
+}
+figure img{
+  opacity: 0.9;
+}
+.figure1:hover img{
+    opacity:0.7;
+}
+.figure2:hover img{
+    transform:translate(-20px,0px);
+opacity:0.7;
+}
+.figure2 figcaption h2{
+    transform: translate(20px,100px);
+}
+.figure2 figcaption p{
+    margin-top: 2px;
+    background: lightblue;
+    transform: translate(-120px, 360px);
+}
+.figure2:hover figcaption p:nth-of-type(1){
+    transform:translate(20px,160px);
+}
+.figure2:hover figcaption p:nth-of-type(2){
+    transform:translate(20px,160px);
+    transition-delay: 0.5s;
+}
+.figure2:hover figcaption p:nth-of-type(3){
+    transform:translate(20px,160px);
+    transition-delay:0.9s;
+}
+.figure2 img{
+    /*transform:rotate(40deg);*/
+    /*border-radius:30%;*/
+    width: 500px;
+    box-shadow:darkred 10px 10px 10px;
+}
+.figure3 img{
+    border-radius:50%;
+}
+.figure3:hover img{
+    transition-delay:0.6s;
+    transform:rotate(360deg);
+    /*box-shadow*/
+
+}
+.figure3 figcaption h2{
+    transform:translate(20px,100px);
+}
+.figure4 figcaption div{
+     background: white;
+     text-indent: 40px;
+     transform:translate(0px,400px);
+     color:deepskyblue;
+    transition:all 1s;
+ }
+.figure4 figcaption h2{
+    transform:translate(20px,100px);
+}
+.figure4 figcaption div span{
+    padding:5px;
+}
+.figure4:hover figcaption div{
+
+    transform:translate(0px,316px);
+}
+.figure4:hover img{
+    opacity:0.6;
+}
+.figure5 figcaption h2{
+    transform:translate(20px,100px);
+}
+.figure5 figcaption div{
+
+    position: absolute;
+    top: 400px;
+
+    background: white;
+    width: 600px;
+    height:200px;
+    opacity:0.7 ;
+    transition:all 1s;
+
+}
+.figure5:hover figcaption div{
+    transform-origin:0 0;
+    transform:rotate(-15deg);
+
+}
+.figure5 figcaption div p{
+text-indent: 200px;
+}
+.figure6 figcaption div{
+    width: 250px;
+    height:250px;
+    border:4px solid white;
+    position:absolute;
+    top:-200px;
+    left:75px;
+    transition:all 1s;
+}
+.figure6 figcaption div p{
+    font-size: 30px;
+
+}
+.figure6 figcaption p{
+   transform: translate(-140px,300px);
+}
+.figure6:hover figcaption div{
+    transform: translate(10px,300px)rotate(360deg);
+
+    /*transform:rotate(90deg);*/
+}
+.figure6:hover figcaption p{
+    transform:translate(100px,220px);
+
+}
+
+.figure6:hover img{
+    opacity:0.7;
+}
+

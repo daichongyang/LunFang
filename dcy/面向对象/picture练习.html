@@ -13,7 +13,7 @@
     </style>
 </head>
 <body id="box">
-<img src="img/1%20(1).gif"/>
+<img id="pic" src="img/1%20(1).gif"/>
 </body>
 <script>
     var oBox= document.getElementById("box");
@@ -24,6 +24,7 @@
         var yy= e.offsetY;
         document.onmousemove=function(e){
             var p={};
+
 
             p.x= e.clientX;
             p.y= e.clientY;
@@ -37,7 +38,7 @@
 
             var i=0;
            var time= setInterval(function(){
-               oBox.src="img/2.gif";
+               pic.src="img/2.gif";
                 var x=arr[i].x;
                 var y=arr[i].y;
                 oBox.style.top=y+"px";
@@ -45,6 +46,7 @@
                 i++;
                 if(i>=arr.length){
                     clearInterval(time);
+                    pic.src="img/1%20(1).gif";
                 }
             },50)
 
